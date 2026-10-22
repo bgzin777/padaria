@@ -1,0 +1,150 @@
+{
+  "theme": "light",
+  "archetype": "ORGANIC & EARTHY",
+  "typography": {
+    "headings": {
+      "family": "Playfair Display",
+      "weights": ["600", "700", "900"],
+      "classes": "font-serif tracking-tight text-stone-900"
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["400", "500", "600"],
+      "classes": "font-sans leading-relaxed text-stone-700"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "classes": "font-mono text-sm tracking-tight"
+    },
+    "sizes": {
+      "h1": "text-3xl sm:text-4xl lg:text-5xl font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold",
+      "h3": "text-xl sm:text-2xl font-bold",
+      "body": "text-base",
+      "small": "text-sm",
+      "tiny_label": "text-xs uppercase tracking-[0.2em] font-bold"
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#D97706",
+      "hover": "#B45309",
+      "light": "#FDE68A",
+      "text": "#FFFFFF",
+      "description": "Warm golden brown, representing baked crust and warmth."
+    },
+    "background": {
+      "app": "#FAFAF9",
+      "card": "#FFFFFF",
+      "glass": "rgba(255, 255, 255, 0.85)"
+    },
+    "text": {
+      "primary": "#1C1917",
+      "secondary": "#57534E",
+      "muted": "#A8A29E"
+    },
+    "status": {
+      "new": "#3B82F6",
+      "preparing": "#F59E0B",
+      "ready": "#10B981",
+      "dispatched": "#8B5CF6",
+      "finished": "#64748B"
+    },
+    "borders": {
+      "subtle": "#E7E5E4",
+      "focus": "#D97706"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "card": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "floating": "shadow-[0_20px_40px_rgb(0,0,0,0.08)]"
+    },
+    "borders": {
+      "radius_base": "rounded-2xl",
+      "radius_button": "rounded-full",
+      "radius_card": "rounded-3xl",
+      "style": "border border-stone-200/60"
+    },
+    "surfaces": {
+      "glassmorphism": "backdrop-blur-xl bg-white/85 border border-white/20 shadow-sm",
+      "neumorphism_soft": "bg-white border border-stone-100 shadow-[2px_4px_16px_rgba(0,0,0,0.04)]"
+    },
+    "motion": {
+      "hover_card": "transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-lg",
+      "tap_button": "active:scale-95 transition-transform",
+      "list_stagger": "animate-in fade-in slide-in-from-bottom-4 duration-500"
+    }
+  },
+  "layouts": {
+    "client_app": {
+      "structure": "Mobile-first view. Fixed top header (glassmorphism), scrollable main content with ample bottom padding (pb-24), sticky bottom navigation.",
+      "product_grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
+      "product_card": "Flex column, image takes top 60%, content 40%. Absolute positioning for 'Add' button overlapping the image bottom edge.",
+      "bottom_nav": "Fixed bottom-0 left-0 w-full h-16 bg-white border-t border-stone-200 flex justify-around items-center z-50 pb-safe"
+    },
+    "admin_dashboard": {
+      "structure": "Responsive dashboard. Hidden sidebar on mobile (hamburger menu), visible on desktop. Topbar for quick actions and profile.",
+      "kpi_bento": "grid grid-cols-2 md:grid-cols-4 gap-4",
+      "order_board": "flex overflow-x-auto gap-4 pb-4 snap-x (Kanban style columns for order statuses)",
+      "density": "Tight padding (p-4), strictly functional and high-contrast."
+    }
+  },
+  "components": {
+    "buttons": "Always pill-shaped (rounded-full). Primary uses bg-amber-600 text-white. Secondary uses bg-stone-100 text-stone-800.",
+    "inputs": "Shadcn based. rounded-xl, border-stone-200, focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500.",
+    "cards": "Cardless or Neumorphism soft. Do not overuse standard Shadcn cards. Use raw divs with rounded-3xl and soft shadows.",
+    "toasts": "Use Sonner for all order notifications and state changes (top-center for mobile, bottom-right for desktop).",
+    "badges": "rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
+  },
+  "responsive": {
+    "breakpoint": "Mobile-first. Base classes apply to mobile. Use sm:, md:, lg: for larger screens.",
+    "layout": "Client app: 1-col -> 2-col -> 3-col on large screens. Admin: Stacked cards -> Grid -> Sidebar layout.",
+    "typography": "Use fluid typography or standard Tailwind scales. H1 shouldn't exceed text-5xl on mobile.",
+    "overflow_guard": "Ensure max-w-[100vw] overflow-x-hidden on root container. Use flex-shrink-0 for scrolling rows.",
+    "tap_targets": "All interactive elements MUST have a minimum height/width of 44px (h-11 or p-3) for mobile touch accessibility."
+  },
+  "image_urls": {
+    "hero_storefront": {
+      "url": "https://images.unsplash.com/photo-1591538519435-4578c3ba26d6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxiYWtlcnklMjBzdG9yZWZyb250JTIwd2FybXxlbnwwfHx8fDE3ODc4MDMzNzV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Warm bakery storefront display, use for login/welcome screen background."
+    },
+    "product_bread": {
+      "url": "https://images.unsplash.com/photo-1568254183919-78a4f43a2877?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxmcmVzaCUyMGJha2VkJTIwYnJlYWQlMjBiYWtlcnl8ZW58MHx8fHwxNzg3ODAzMzc1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Fresh artisan bread, use for featured product or bread category."
+    },
+    "product_pastry": {
+      "url": "https://images.pexels.com/photos/17104937/pexels-photo-17104937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Flaky pastries with coffee, use for pastry category or combo deals."
+    },
+    "product_coffee": {
+      "url": "https://images.pexels.com/photos/34773646/pexels-photo-34773646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Coffee and croissants, use for breakfast offers or coffee category."
+    }
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Build the client side strictly mobile-first. The user will view the 'Padaria do Brunao' app mostly on phones. Ensure the bottom nav is always visible and content doesn't get hidden behind it (add padding-bottom to main).",
+    "CRITICAL: The Admin Dashboard must be a separate route (e.g., /admin) and optimized for tablet/desktop, though still responsive.",
+    "CRITICAL: Include `data-testid` attributes on all buttons, links, inputs, and key elements (e.g., data-testid='add-to-cart-btn', data-testid='order-status-badge').",
+    "CRITICAL: Do NOT use transparent backgrounds for floating headers, dropdowns, or bottom navs. Always use solid colors or glassmorphism (backdrop-blur + high opacity bg).",
+    "CRITICAL: Use Lucide React for icons. Ensure icons in the bottom nav are clear and change color/weight when active.",
+    "CRITICAL: For real-time simulation, use React state and setTimeout/setInterval to demonstrate order status changes in the dashboard.",
+    "Do not use generic 'Inter' for headings. Use 'Playfair Display' for an artisan bakery feel, and 'Manrope' for body text.",
+    "Ensure contrast ratios are met. Dark text on light backgrounds. Do not use low-contrast grays for important information.",
+    "Use generous padding (p-4 to p-6) inside cards. Let the design breathe."
+  ],
+  "universal_guidelines_for_main_agent": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid the 'AI slop' aesthetic. Make creative, distinctive frontends.",
+    "Do not use dark colors as gradients.",
+    "Don't make generic centered layouts. Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container (.App { text-align: center; } is FORBIDDEN).",
+    "Always use modern button styles (pill-shaped) with interaction animations.",
+    "NEVER use AI assistant Emoji characters (🤖🧠💭) for icons.",
+    "Every interaction needs micro-animations (hover states, active scales).",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use 'sonner' for toasts."
+  ]
+}
